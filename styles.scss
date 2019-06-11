@@ -1,5 +1,52 @@
 $background-color: grey;
+$grid-layout: grid;
+$grid-template-col: repeat(13, 1fr);
+$main-grid-col-span: 2 / span 8;
+$select-design-grid-col-span: 11 / span 2;
+$grid-template-row: repeat(2, 1fr);
 
 body {
     background-color: $background-color;
+   // display: $grid-layout;
+   // grid-template-columns: repeat(13, 1fr);
+}
+
+ .page-wrapper {
+    display: $grid-layout;
+    grid-template-columns: repeat(13, 1fr);
+    grid-template-rows: repeat(9, auto);
+    
+     //grid-column: $main-grid-col-span;
+
+ }
+.design-selection {
+    grid-column: $select-design-grid-col-span;
+}
+.intro {
+    display: grid;
+    grid-column: $main-grid-col-span;
+    grid-template-rows: repeat(3, auto);
+        header {
+            display: grid;
+            //grid-column: $main-grid-col-span;
+            grid-template-rows: repeat(2, auto);
+
+            h1 {
+             grid-row: 1;
+        //border-style: dotted;
+            grid-column: 1 / span 2;
+        }
+            h2 {
+            grid-row: 2;
+            // border-style: dotted;
+            grid-column: 1 / span 2;
+        }
+    }   
+}
+.main {
+    grid-column: $main-grid-col-span;
+
+}
+.sidebar {
+    grid-column: $select-design-grid-col-span;
 }
