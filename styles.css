@@ -83,7 +83,7 @@ div {
     text-align: center;
   }
   .preamble h3::after {
-    content: url("forest-header.jpg");
+    content: url("nature2.jpeg");
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
