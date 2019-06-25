@@ -89,5 +89,45 @@ div {
     display: inline-flex;
     margin-right: -10px;
   }
+  .explanation h3 {
+    text-align: center;
+  }
+  .explanation h3::after {
+    content: url("waterfall1.jpg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: -10px;
+  }
+  .participation h3 {
+    text-align: center;
+  }
+  .participation h3::after {
+    content: url("participation.jpg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: -10px;
+  }
+  .benefits h3 {
+    text-align: center;
+  }
+  .benefits h3::after {
+    content: url("benefits.jpeg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: -10px;
+  }
+  .requirements h3 {
+    text-align: center;
+  }
+  .requirements h3::after {
+    content: url("requirements.jpg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: -10px;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
