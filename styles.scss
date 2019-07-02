@@ -1,58 +1,209 @@
 
+$colorLeft: rgb(47, 175, 47);
+$colorRight: darkgreen;
 body {
     background-color: #4D806D;
 }
 div {
     display: block;
 }
-@media only screen and (min-width: 600px) {
-.page-wrapper {
-    display: flex;
-    flex-direction: row;
-    background-color: yellow;
-    border: 1px solid;
-    padding: 20px;
+h1, h2{
+    color: rgb(0, 0, 0);
+    text-shadow: 
+
+    (-2px) (2px) 0 $colorLeft,
+    (-2px) (0) 0 $colorLeft,
+    (-2px) (-2px) 0 $colorLeft,
+
+    (0) (2px) 0 $colorLeft,
+    (0) (-2px) 0$colorLeft,
+
+    (2px) (2px) 0 $colorRight,
+    (2px) (0) 0 $colorRight,
+    (2px) (-2px) 0 $colorRight,
+
+    (0) (2px) 0 $colorRight,
+    (0) (-2px) 0 $colorRight;
+}
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
+        transform: translateX(100%);
+    }
+}
+@media only screen and (min-width: 800px) {
+    body {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+    .page-wrapper {
+    // display: grid;
+    // grid-template-columns: 20% 40% 35% 5%;
+    // background-color: beige;
+    // margin-left: 50px;
+    // margin-right: 50px;
+
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+    width: 691px;
+    text-align: left;
+    position: relative;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: beige;
+
+
 }
 
 .intro {
-    display: flex;
-    flex-direction: column;
+    min-width: 470px;
+    // display: flex;
+    // flex-direction: column;
+   // grid-column: 2;
+    //display: grid;
+    //grid-template-columns: 25% 35% 35% 5%;
+
+  
+    //grid-template-columns: 20% 30% 30% 20%;
     h1, h2{
         text-align: center;
-        font-size: 50px;
+        font-size: 45px;
+        color: rgb(0, 0, 0);
+        text-transform: uppercase;
+        //margin-left: 20px;
+       // margin-left: 170px;
+       
+        
     }
     h2 {
-
+        display: inline-block;
+       margin-left: 20px;
+        margin-top: -10px;
     }
+   
+}
+header {
+    width: 506px;
+    height: 234px;
+    float: left;
+    background-image: url('forest-header.jpg');
+    width: 100%;
+    height: 220px;
+    margin-left: 0px;
+
+    //animation: 1s ease-out 0s slideInFromLeft;
+
+}
+.summary {
+    margin-top: 45px;
+    margin-right: 50px;
+    width: 179px;
+    height: 117px;
+    float: right;
+    padding-right: 6px;
+    line-height: 1.5;
+
+    //animation: 1s ease-out 0s slideInFromRight;
+    //border: brown dotted;
+
+
+}
+
+.preamble {
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: -10px;
+    padding-bottom: 30px;
+    width: 400px;
+    clear: both;
+    padding-right: 0px;
+    padding-left: 0px;
     
-}
-.supporting {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 1;
-    display: block;
-}
-.sidebar .wrapper .design-selection {
-    // position: relative;
-    // top: 200px;
-    // right: 0px;
-    // padding: 0 2em;
-    // left: 500px;
-    display: flex;
-    flex-direction: row;
-    ::before {
-
+   // animation: 1s ease-out 0s slideInFromLeft;
+    //border: brown dotted;
+    p {
+        margin-top: 10px;
+        text-align: justify;
+        line-height: 10pt;
+        
     }
-
-}
-// .design-selection {
-//     display: flex;
-//     flex-direction: row;
-// }
 }
 
-@media only screen and (max-width: 600px) {
+    
+
+.supporting {
+    margin-left: 10px;
+    padding: 0px 0px;
+    width: 400px;
+    position: relative;
+    //animation: 1s ease-out 0s slideInFromLeft;
+    //border: brown dotted;
+
+}
+.sidebar {
+    display: inline-block;
+    width: 179px;
+    position: absolute;
+    top: 593px;
+    left: 456px;
+    margin: 0px;
+    padding-top: 0px;
+    padding-right: 6px;
+    padding-bottom: 0px;
+    border: brown dotted;
+    text-align: center;
+   //animation: 1s ease-out 0s slideInFromRight;
+
+   ul {
+       display: block;
+       list-style-type: none;
+       line-height: 1.3;
+       margin-block-start: 1em;
+       margin-block-end: 1em;
+       margin-inline-start: 0px;
+       margin-inline-end: 0px;
+       padding-inline-start: 40px;
+       text-align: left;
+
+   }
+
+}
+.design-selection {
+    nav {
+       // background: linear-gradient(90deg, blue, red) 0 2em/100% 2px no-repeat;
+        transition: background 0.3s;
+        will-change: background;  
+    }
+    nav li a:hover {
+            cursor: pointer;
+            background: linear-gradient(90deg, rgb(167, 55, 231), darkgreen) 0 1em/100% 20em no-repeat;
+           // color: rgba(255,255,255,1);
+      }
+    }
+}
+h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    //margin-top: -10px;
+}
+
+
+@media only screen and (max-width: 800px) {
     .page-wrapper {
         display: flex;
         flex-direction: column;
