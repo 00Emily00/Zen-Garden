@@ -116,6 +116,12 @@ h1, h2 {
     padding-right: 0px;
     padding-left: 0px;
   }
+  .preamble h3::after {
+    content: url("nature2.jpeg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
   .preamble p {
     margin-top: 10px;
     text-align: justify;
@@ -126,6 +132,30 @@ h1, h2 {
     padding: 0px 0px;
     width: 400px;
     position: relative;
+  }
+  .supporting .explanation h3::after {
+    content: url("waterfall1.jpg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .supporting .participation h3::after {
+    content: url("participation.jpg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .supporting .benefits h3::after {
+    content: url("benefits.jpeg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .supporting .requirements h3::after {
+    content: url("requirements.jpg");
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
   .sidebar {
     display: inline-block;

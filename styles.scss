@@ -132,6 +132,12 @@ header {
     clear: both;
     padding-right: 0px;
     padding-left: 0px;
+    h3 {
+        &::after {
+            content: url('nature2.jpeg');
+            display: inline-flex;
+        }
+    }
     
    // animation: 1s ease-out 0s slideInFromLeft;
     //border: brown dotted;
@@ -153,7 +159,42 @@ header {
     //animation: 1s ease-out 0s slideInFromLeft;
     //border: brown dotted;
 
+    .explanation{
+        h3 {
+            &::after {
+                content: url('waterfall1.jpg');
+                display: inline-flex;   
+            }
+        }
+    }
+
+    .participation {
+        h3 {
+            &::after {
+                content: url('participation.jpg');
+                display: inline-flex;   
+            }
+        }
+    } 
+    .benefits {
+        h3 {
+            &::after {
+                content: url('benefits.jpeg');
+                display: inline-flex; 
+            }
+        }
+    } 
+    .requirements{
+        h3 {
+            &::after {
+                content: url('requirements.jpg');
+                display: inline-flex; 
+            }
+        }
+    }
+
 }
+
 .sidebar {
     display: inline-block;
     width: 179px;
