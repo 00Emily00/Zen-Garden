@@ -1,14 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower&display=swap);
 body {
   background-color: #4D806D;
+  font-family: "Indie Flower", cursive;
 }
 
 div {
   display: block;
 }
 
-h1, h2 {
-  color: black;
-  text-shadow: -2px 2px 0 #2faf2f, -2px 0 0 #2faf2f, -2px -2px 0 #2faf2f, 0 2px 0 #2faf2f, 0 -2px 0 #2faf2f, 2px 2px 0 darkgreen, 2px 0 0 darkgreen, 2px -2px 0 darkgreen, 0 2px 0 darkgreen, 0 -2px 0 darkgreen;
+h1, h2, h3 {
+  color: beige;
+  text-shadow: -2px 2px 0 #088304, -2px 0 0 #088304, -2px -2px 0 #088304, 0 2px 0 #088304, 0 -2px 0 #088304, 2px 2px 0 #00642a, 2px 0 0 #00642a, 2px -2px 0 #00642a, 0 2px 0 #00642a, 0 -2px 0 #00642a;
+}
+
+h3 {
+  word-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 @-webkit-keyframes slideInFromLeft {
@@ -55,12 +63,16 @@ h1, h2 {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 665px) {
   body {
     margin-left: 0px;
     margin-top: 0px;
     margin-right: 0px;
     margin-bottom: 0px;
+  }
+  p {
+    margin-top: 10px;
+    text-align: justify;
   }
   .page-wrapper {
     margin-top: 0px;
@@ -105,27 +117,35 @@ h1, h2 {
     float: right;
     padding-right: 6px;
     line-height: 1.5;
+    background-color: #4D806D;
+    border-radius: 10px;
+    height: 250px;
+    padding: 15px;
+    word-spacing: 5px;
+  }
+  .summary p {
+    text-align: inherit;
   }
   .preamble {
     display: inline-block;
     margin-left: 10px;
     padding-top: -10px;
-    padding-bottom: 30px;
     width: 400px;
     clear: both;
     padding-right: 0px;
     padding-left: 0px;
+  }
+  .preamble h3 {
+    background-image: url("leaf_underline.png");
+    background-repeat: no-repeat;
+    background-position: -5px -40px;
   }
   .preamble h3::after {
     content: url("nature2.jpeg");
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-  }
-  .preamble p {
-    margin-top: 10px;
-    text-align: justify;
-    line-height: 10pt;
+    padding-top: 50px;
   }
   .supporting {
     margin-left: 10px;
@@ -133,58 +153,87 @@ h1, h2 {
     width: 400px;
     position: relative;
   }
+  .supporting .explanation h3 {
+    background-image: url("leaf_underline.png");
+    background-repeat: no-repeat;
+    background-position: -5px -40px;
+  }
   .supporting .explanation h3::after {
     content: url("waterfall1.jpg");
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    padding-top: 50px;
+  }
+  .supporting .participation h3 {
+    background-image: url("leaf_underline.png");
+    background-repeat: no-repeat;
+    background-position: -5px -40px;
   }
   .supporting .participation h3::after {
     content: url("participation.jpg");
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    padding-top: 50px;
+  }
+  .supporting .participation p {
+    float: left;
+    width: 650px;
+    background-image: none;
+  }
+  .supporting .benefits h3 {
+    background-image: url("leaf_underline.png");
+    background-repeat: no-repeat;
+    background-position: -5px 300px;
   }
   .supporting .benefits h3::after {
     content: url("benefits.jpeg");
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    padding-top: 50px;
+  }
+  .supporting .benefits p {
+    float: left;
+    width: 650px;
+  }
+  .supporting .requirements h3 {
+    background-image: url("leaf_underline.png");
+    background-repeat: no-repeat;
+    background-position: -5px 80px;
   }
   .supporting .requirements h3::after {
     content: url("requirements.jpg");
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+    padding-top: 50px;
+  }
+  .supporting .requirements p {
+    float: left;
+    width: 650px;
   }
   .sidebar {
     display: inline-block;
     width: 179px;
     position: absolute;
     top: 593px;
-    left: 456px;
+    left: 433px;
     margin: 0px;
     padding-top: 0px;
     padding-right: 6px;
     padding-bottom: 0px;
-    border: brown dotted;
     text-align: center;
+    background-color: #4D806D;
+    border-radius: 10px;
+    padding: 15px;
   }
   .sidebar ul {
-    display: block;
-    list-style-type: none;
-    line-height: 1.3;
-    -webkit-margin-before: 1em;
-            margin-block-start: 1em;
-    -webkit-margin-after: 1em;
-            margin-block-end: 1em;
-    -webkit-margin-start: 0px;
-            margin-inline-start: 0px;
-    -webkit-margin-end: 0px;
-            margin-inline-end: 0px;
-    -webkit-padding-start: 40px;
-            padding-inline-start: 40px;
     text-align: left;
+  }
+  .sidebar ul li {
+    list-style-image: url("leaf_icon.png");
   }
   .design-selection nav {
     -webkit-transition: background 0.3s;
@@ -204,7 +253,7 @@ h3 {
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 665px) {
   .page-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -222,6 +271,11 @@ h3 {
     font-size: 40px;
     text-transform: uppercase;
     margin-top: -10px;
+  }
+  p {
+    margin-top: 10px;
+    text-align: justify;
+    text-align: center;
   }
   header {
     margin-left: -15px;
